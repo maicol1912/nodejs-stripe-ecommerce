@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmación de compra</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            font-size: 16px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        .button {
+            background-color: #008CBA;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #0069B4;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Confirmación de compra</h1>
+    <p>
+        Hola, <b>{{ customerName }}</b>,
+    </p>
+    <p>
+        Tu compra ha sido realizada con éxito.
+    </p>
+    <p>
+        El número de pedido es: <b>{{ orderId }}</b>
+    </p>
+    <p>
+        Para ver el detalle de tu pedido, haz clic en el siguiente enlace:
+    </p>
+    <p>
+        <a href="{{ orderLink }}" class="button">Ver pedido</a>
+    </p>
+    <p>
+        Gracias por tu compra.
+    </p>
+</div>
+</body>
+</html>

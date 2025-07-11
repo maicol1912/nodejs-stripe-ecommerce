@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "compilerOptions": {
+    "assets": [
+      "templates/**",
+      "shared/utility/mailer/templates",
+      "certs/**"
+    ],
+    "watchAssets": true
+  },
+  "buildOptions": {
+    "hbs": true
+  }
+}

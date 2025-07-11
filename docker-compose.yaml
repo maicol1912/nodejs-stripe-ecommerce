@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  ecommerce_back:
+    container_name: ecommerce_back
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: super_ecommerce_nestjs
+    ports:
+      - '444:444'
+    networks:
+      - backend-network
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - '27017:27017'
+    environment:
+      MONGO_INITDB_ROOT_USERNAME:
+      MONGO_INITDB_ROOT_PASSWORD:
+    volumes:
+      - mongodb-data:/data/db
+    networks:
+      - backend-network
+
+networks:
+  backend-network:
+    external: true
+
+volumes:
+  mongodb-data:

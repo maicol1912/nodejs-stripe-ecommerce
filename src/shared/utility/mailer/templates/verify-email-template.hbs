@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Activación de cuenta</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            font-size: 16px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        .button {
+            background-color: #008CBA;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #0069B4;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Activación de cuenta {{customerEmail}}</h1>
+    <p>
+        Hola, <b>{{ customerName }}</b>,
+    </p>
+    <p>
+        Para activar tu cuenta, debes ingresar el siguiente código OTP:
+    </p>
+    <p>
+        <b>{{ otp }}</b>
+    </p>
+    <p>
+        Si no solicitaste esta activación, por favor ignora este correo electrónico.
+    </p>
+    <p>
+        <a href="https://example.com/activate" class="button">Activar cuenta</a>
+    </p>
+</div>
+</body>
+</html>
