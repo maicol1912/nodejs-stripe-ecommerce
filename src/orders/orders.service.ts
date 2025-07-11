@@ -277,12 +277,12 @@ export class OrdersService {
 
       // Inicia el servicio de escucha del webhook
       const endpointSecret = config.get('stripe.webhookSecret');
-      /*const webhook = await this.stripeClient.webhookEndpoints.create({
+      const webhook = await this.stripeClient.webhookEndpoints.create({
         url: config.get('stripe.webhookUrl'),
         enabled_events: ['*'],
-      });*/
+      });
 
-      //console.log('Webhook listener iniciado correctamente:', webhook.id);
+      console.log('Webhook listener iniciado correctamente:', webhook.id);
     } catch (error) {
       console.error('Error al iniciar el webhook listener:', error.message);
     }
